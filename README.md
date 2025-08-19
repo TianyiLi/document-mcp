@@ -62,17 +62,54 @@ Add to your `claude_desktop_config.json`:
 ```
 
 #### Claude Code
-Create `CLAUDE.md` in your project root:
+
+##### Option 1: Through Claude Desktop (Automatic)
+Claude Code automatically detects MCP servers configured in Claude Desktop - no additional setup required.
+
+##### Option 2: Direct CLI Configuration
+Configure directly via Claude Code CLI:
+
+```bash
+# Using npx (recommended)
+claude mcp add document-mcp -- npx @tianyi-li/document-mcp
+
+# Using global installation
+claude mcp add document-mcp -- document-mcp
+
+# List configured servers
+claude mcp list
+
+# Remove if needed
+claude mcp remove document-mcp
+```
+
+##### Project Documentation (CLAUDE.md)
+Add to your project's `CLAUDE.md` for team reference:
 
 ```markdown
-# Document MCP Server Available
+# Document MCP Server
 
-Tools for component documentation management:
-- `init_components`: Scan all components
-- `get_component_info`: Get specific component details  
-- `update_component_description`: Update description only
-- `update_component_props`: Update props only
-- `compare_md5`: Check for changes
+This project uses Document MCP Server for efficient component documentation management.
+
+## Setup
+```bash
+# Quick setup
+npm install -g @tianyi-li/document-mcp
+claude mcp add document-mcp -- document-mcp
+```
+
+## Available Tools
+- `init_components` - Scan all project components  
+- `get_component_info` - Get specific component details
+- `update_component_description` - Update description only (saves ~75% tokens)
+- `update_component_props` - Update props only (saves ~75% tokens)
+- `update_component_content` - Batch update multiple sections
+- `compare_md5` - Verify file changes
+
+## Workflow
+1. `init_components` → Understand project structure
+2. `update_component_*` → Make targeted updates
+3. `compare_md5` → Verify changes
 ```
 
 ## API Reference
