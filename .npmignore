@@ -1,0 +1,39 @@
+# Source files
+src/
+tsconfig.json
+biome.jsonc
+
+# Development files
+*.log
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Dependencies
+node_modules/
+.pnpm-lock.yaml
+pnpm-lock.yaml
+
+# Build cache
+.tsbuildinfo
+
+# Testing
+coverage/
+*.test.js
+*.test.ts
+__tests__/
+
+# Development tools
+.biomejs/
+.eslintrc*
+.prettierrc*
+
+# Git
+.git/
+.gitignore
+
+# CI/CD
+.github/

@@ -1,0 +1,58 @@
+{
+  "name": "@tianyi-li/document-mcp",
+  "version": "0.0.1",
+  "description": "A Model Context Protocol (MCP) server for efficient component documentation management and updates",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "document-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "prepublishOnly": "pnpm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "components",
+    "documentation",
+    "ai",
+    "claude",
+    "md5",
+    "token-optimization",
+    "component-management",
+    "markdown"
+  ],
+  "author": "TianyiLi <e0991100238@gmail.com>",
+  "homepage": "https://github.com/TianyiLi/document-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TianyiLi/document-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TianyiLi/document-mcp/issues"
+  },
+  "license": "ISC",
+  "packageManager": "pnpm@10.14.0",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.3",
+    "zod": "^4.0.17"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.0",
+    "@tsconfig/node20": "^20.1.6",
+    "@types/node": "^24.3.0",
+    "typescript": "^5.0.0"
+  }
+}
