@@ -4,7 +4,7 @@ import fg from 'fast-glob';
 import path from 'path';
 import * as R from 'ramda';
 import fs from 'fs';
-import { detectNewline } from 'detect-newline';
+import { ReadmeSectionItem } from './utils/readmeParser.js';
 
 export const server = new McpServer(
   {

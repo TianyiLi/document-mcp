@@ -20,7 +20,8 @@
     "dev": "tsc --watch",
     "start": "node dist/index.js",
     "prepublishOnly": "pnpm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest",
+    "test:run": "vitest run"
   },
   "keywords": [
     "mcp",
@@ -60,6 +61,7 @@
     "@tsconfig/node20": "^20.1.6",
     "@types/node": "^24.3.0",
     "@types/ramda": "^0.31.0",
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "vitest": "^3.2.4"
   }
 }
